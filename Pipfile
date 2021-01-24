@@ -1,14 +1,23 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
 
-dash==1.9.1"
-dash-bootstrap-components
-gunicorn
-plotly
-pandas
-joblib==0.16.0
-category-encoders==2.2.2
-matplotlib
-seaborn
-pip
-install
-xgboost==1.3.3
-scikit-learn==0.23.1
+[packages]
+dash = "==1.9.1"
+dash-bootstrap-components = "*"
+gunicorn = "*"
+plotly = "*"
+pandas = "*"
+joblib = "==0.11"
+category-encoders = "==2.2.2"
+matplotlib = "*"
+seaborn = "*"
+install = "*"
+xgboost = "==1.3.3"
+scikit-learn = "==0.24.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
