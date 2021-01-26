@@ -19,11 +19,11 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         ### Predict someones relationship status using data science. Experimental APP. 
-        
+
 
            """
         ),
-        dcc.Link(dbc.Button('Price Predictions', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Relationship Predictions', color='primary'), href='/predictions')
     ],
     md=4,
 )
