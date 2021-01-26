@@ -18,8 +18,8 @@ column1 = dbc.Col(
     [
         dcc.Markdown(
             """
-        ##Car Prices according to Make,Model, Model Year, wether or not is Clean Air Elegible, and electric Range.
-        Click Button Below to get a price prediction
+        ### Predict someones relationship status using data science. Experimental APP. 
+        
 
            """
         ),
