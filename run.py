@@ -11,7 +11,7 @@ from pages import index, predictions, insights, process
 
 # Navbar docs: https://dash-bootstrap-components.opensource.faculty.ai/l/components/navbar
 navbar = dbc.NavbarSimple(
-    brand='Relationship Status Prediction using Data Science',
+    brand='Relationship Status Prediction using Data Science<just for fun>',
     brand_href='/', 
     children=[        
         dbc.NavItem(dcc.Link('Home', href='/', className='nav-link')),

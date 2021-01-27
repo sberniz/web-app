@@ -4,14 +4,12 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-from joblib import load
-app_pipe = load('assets/dating.pkl')
 import pandas as pd
 import dash_table
 from collections import OrderedDict
 # Imports from this application
 import app
-from app import app,X_test,dating_df2
+from app import app,dating_df2
 #from joblib import load
 import pickle
 app_pipe = pickle.load(open('assets/dating.pkl','rb'))

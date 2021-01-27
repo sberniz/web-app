@@ -24,19 +24,6 @@ import dash_bootstrap_components as dbc
 
 dating_df = pd.read_csv('dating_csv.csv')
 dating_df2 = dating_df.fillna('unknown')
-# to remove after maybe 
-electric_cars = pd.read_csv('Electric_Vehicle_Population_Data.csv')
-electric_cars['Base MSRP'] = electric_cars['Base MSRP'].replace({0:np.NaN,845000:np.NaN})
-electric_cars.dropna(subset=['Base MSRP'], inplace=True ) #drop NA values for base MSRP
-def wrangle1split(df):
-      X = df.copy()
-      y = X['Base MSRP']
-      X = X[['Model Year','Make','Model','Electric Vehicle Type','Clean Alternative Fuel Vehicle (CAFV) Eligibility','Electric Range']]
-      X_train,X_val,y_train,y_val = train_test_split(X,y,train_size = 0.8, test_size=0.2,random_state=42)
-      return X_train, X_val, y_train, y_val
-#SPlitter
-X_train ,X_test, y_train, y_test = wrangle1split(electric_cars) #Train Test SPlit
-X_train,X_val,y_train,y_val = train_test_split(X_train,y_train,test_size=0.2,train_size=0.8, random_state=42) #Train/Validation Split
 
 #XG Boost Regression with early stopping and hyper parameter tuning, best model , will be deployment for post/apptop if the score hasn't improved in 50 rounds
 #Pipeline for app
