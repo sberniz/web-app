@@ -22,6 +22,9 @@ from sklearn.preprocessing import StandardScaler
 import dash
 import dash_bootstrap_components as dbc
 
+dating_df = pd.read_csv('dating_csv.csv')
+dating_df2 = dating_df.fillna('unknown')
+# to remove after maybe 
 electric_cars = pd.read_csv('Electric_Vehicle_Population_Data.csv')
 electric_cars['Base MSRP'] = electric_cars['Base MSRP'].replace({0:np.NaN,845000:np.NaN})
 electric_cars.dropna(subset=['Base MSRP'], inplace=True ) #drop NA values for base MSRP
@@ -37,8 +40,6 @@ X_train,X_val,y_train,y_val = train_test_split(X_train,y_train,test_size=0.2,tra
 
 #XG Boost Regression with early stopping and hyper parameter tuning, best model , will be deployment for post/apptop if the score hasn't improved in 50 rounds
 #Pipeline for app
-from joblib import load
-app_pipe = load('assets/app_pipe.joblib')
 #y_pred = app_pipe.predict(X_test)[0]
 external_stylesheets = [
     dbc.themes.BOOTSTRAP, # Bootswatch theme
@@ -52,5 +53,5 @@ meta_tags=[
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, meta_tags=meta_tags)
 app.config.suppress_callback_exceptions = True # see https://dash.plot.ly/urls
-app.title = 'Electric Cars Price Predictor' # appears in browser title bar
+app.title = 'Relationship Status Predictor <Just for Fun>' # appears in browser title bar
 server = app.server
