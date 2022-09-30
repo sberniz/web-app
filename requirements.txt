@@ -3,7 +3,7 @@ dash-bootstrap-components
 gunicorn
 plotly
 pandas
-joblib==0.11
+joblib==1.2.0
 category-encoders==2.2.2
 matplotlib
 seaborn
